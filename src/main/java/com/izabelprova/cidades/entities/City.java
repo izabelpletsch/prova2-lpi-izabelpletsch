@@ -15,8 +15,8 @@ public class City {
 
   String nome;
   String estado;
-  String populacao;
-  String pib;
+  Double populacao;
+  Double pib;
   public int getId() {
     return id;
   }
