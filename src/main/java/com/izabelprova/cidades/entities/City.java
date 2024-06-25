@@ -1,5 +1,6 @@
 package com.izabelprova.cidades.entities;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -13,10 +14,18 @@ public class City {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   int id;
 
+  @Column(nullable = false)
   String nome;
+
+  @Column(nullable = false)
   String estado;
+
+  @Column(nullable = false)
   Double populacao;
+
+  @Column(nullable = false)
   Double pib;
+  
   public int getId() {
     return id;
   }

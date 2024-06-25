@@ -1,5 +1,15 @@
 package com.izabelprova.cidades.dto;
 
-public record CityRequest(String nome, String estado, Double populacao, Double pib) {
+import jakarta.validation.constraints.NotNull;
+
+public record CityRequest(
+  @NotNull(message = "Nome não pode ser nulo")
+  String nome, 
+  @NotNull(message = "Estado não pode ser nulo")
+  String estado, 
+  @NotNull(message = "População não pode ser nulo")
+  Double populacao, 
+  @NotNull(message = "PIB não pode ser nulo")
+  Double pib) {
 
 }
