@@ -35,16 +35,16 @@ public class City {
   public void setEstado(String estado) {
     this.estado = estado;
   }
-  public String getPopulacao() {
+  public Double getPopulacao() {
     return populacao;
   }
-  public void setPopulacao(String populacao) {
+  public void setPopulacao(Double populacao) {
     this.populacao = populacao;
   }
-  public String getPib() {
+  public Double getPib() {
     return pib;
   }
-  public void setPib(String pib) {
+  public void setPib(Double pib) {
     this.pib = pib;
   }
 
