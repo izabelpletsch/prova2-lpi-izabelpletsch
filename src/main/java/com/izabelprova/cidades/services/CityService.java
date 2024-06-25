@@ -36,7 +36,7 @@ public class CityService {
     return CityMapper.toDTO(city);
   }
 
-  public void update(int id, CityRequest requestCity) {
+  public CityResponse update(int id, CityRequest requestCity) {
     try {
       City city = cityRepository.getReferenceById(id);
 
@@ -45,6 +45,8 @@ public class CityService {
       city.setPopulacao(Optional.ofNullable(requestCity.populacao()).orElse(city.getPopulacao()));
       city.setPib(Optional.ofNullable(requestCity.pib()).orElse(city.getPib()));
       cityRepository.save(city);
+
+      return CityMapper.toDTO(city);
     } catch (EntityNotFoundException e) {
       throw new EntityNotFoundException("Cidade não cadastrada");
     }
